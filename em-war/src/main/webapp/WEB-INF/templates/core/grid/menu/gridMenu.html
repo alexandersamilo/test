@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title></title>
+</head>
+<body layout:fragment="gridMenu-body">
+
+<!--Для широких экранов-->
+<div class="visible" style="padding-left: 10px">
+    <span class="visible-lg" style="margin-bottom: 10px">
+        <button data-bind="click: add, visible: canCreate" type="button" title="Добавить" class="btn btn-default glyphicon glyphicon-plus add"></button>
+        <button data-bind="click: view, visible: canRead" type="button" title="Просмотреть" class="btn btn-default glyphicon glyphicon-eye-open view"></button>
+        <button data-bind="click: edit, visible: canUpdate" type="button" title="Редактировать" class="btn btn-default glyphicon glyphicon-pencil edit"></button>
+        <button data-bind="click: remove, visible: canDelete" type="button" title="Удалить" class="btn btn-default glyphicon glyphicon-remove remove"></button>
+        <button data-bind="click: refresh" type="button" title="Обновить" class="btn btn-default glyphicon glyphicon-refresh refresh"></button>
+    </span>
+    <span class="visible-md" style="margin-bottom: 10px">
+        <button data-bind="click: add, visible: canCreate" type="button" title="Добавить" class="btn btn-default glyphicon glyphicon-plus add"></button>
+        <button data-bind="click: view, visible: canRead" type="button" title="Просмотреть" class="btn btn-default glyphicon glyphicon-eye-open view"></button>
+        <button data-bind="click: edit, visible: canUpdate" type="button" title="Редактировать" class="btn btn-default glyphicon glyphicon-pencil edit"></button>
+        <button data-bind="click: remove, visible: canDelete" type="button" title="Удалить" class="btn btn-default glyphicon glyphicon-remove remove"></button>
+        <button data-bind="click: refresh" type="button" title="Обновить" class="btn btn-default glyphicon glyphicon-refresh refresh"></button>
+    </span>
+    <span class="visible-sm" style="margin-bottom: 10px">
+        <button data-bind="click: add, visible: canCreate" type="button" title="Добавить" class="btn btn-default glyphicon glyphicon-plus add"></button>
+        <button data-bind="click: view, visible: canRead" type="button" title="Просмотреть" class="btn btn-default glyphicon glyphicon-eye-open view"></button>
+        <button data-bind="click: edit, visible: canUpdate" type="button" title="Редактировать" class="btn btn-default glyphicon glyphicon-pencil edit"></button>
+        <button data-bind="click: remove, visible: canDelete" type="button" title="Удалить" class="btn btn-default glyphicon glyphicon-remove remove"></button>
+        <button data-bind="click: refresh" type="button" title="Обновить" class="btn btn-default glyphicon glyphicon-refresh refresh"></button>
+    </span>
+</div>
+
+<!--Для узких экранов-->
+<div>
+    <span class="visible-xs">
+        <nav class="navbar navbar-inverse navbar-fixed-bottom bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Действия <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-bind="click: add, visible: canCreate" class="add">Добавить</a></li>
+                                <li class="divider" data-bind="visible: canCreate"></li>
+                                <li><a href="#" data-bind="click: view, visible: canRead" class="view">Просмотр</a></li>
+                                <li class="divider" data-bind="visible: canRead"></li>
+                                <li><a href="#" data-bind="click: edit, visible: canUpdate" class="edit">Редактировать</a></li>
+                                <li class="divider" data-bind="visible: canUpdate"></li>
+                                <li><a href="#" data-bind="click: remove, visible: canDelete" class="remove">Удалить</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </span>
+</div>
+</body>
+</html>

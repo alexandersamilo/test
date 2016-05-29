@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title></title>
+</head>
+<body layout:fragment="remove-dialog-body">
+
+<div class="modal fade" id="removeDialog" tabindex="-1" role="dialog" aria-labelledby="removeDialogLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="removeDialogLabel">Удаление</h4>
+            </div>
+            <div class="modal-body">
+                Вы действительно хотите удалить выделенную запись?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Нет</button>
+                <button type="button" class="btn btn-primary applyRemove">Да</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
